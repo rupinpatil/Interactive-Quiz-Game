@@ -1,0 +1,339 @@
+/*import google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Raleway:ital,wght@1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../images/purple-background.jpg") center center;
+    background-size: cover;
+    font-family:'Raleway', sans-serif;
+    font-weight: 250;
+}
+/*headings and logo*/
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #FECCFF;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 6px;
+    color: #FECCFF;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+#heading {
+    margin-bottom: 2.5rem;
+}
+
+#logo {
+    float: left;
+    font-size: 300%;
+    margin-left: 30px;
+    text-decoration: none;
+}
+/*main navigation*/
+#menu {
+    font-size: 150%;
+    letter-spacing: 4px;
+}
+
+#menu, #logo {
+    line-height: 125px;
+}
+
+#menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+    color: #FECCFF;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*hover effect for nav bar*/
+#menu a:hover {
+    border-bottom: 3px solid #C2A91D;
+}
+
+/*highlight active nav*/
+.active {
+    border-bottom: 3px solid #C2A91D;
+}
+
+/*background-image*/
+#image {
+    justify-content: center;
+}
+/*containers on all pages*/
+.container {
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*lighbulb icon on home page*/
+div#icon {
+    font-size: 5rem;
+    color: #C2A91D;
+}
+
+/*buttons on all pages*/
+.button {
+    margin-bottom: .5rem;
+    width: 15.5rem;
+    height: 4rem;
+    border: 3px outset #C2A91D;
+    border-radius: 5px;
+    text-align: center;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-weight:400;
+    font-size: 2rem;
+    background-color: #AC4ADC;
+    color: #FECCFF;
+    font-family: inherit
+}
+
+/*hover effect for buttons*/
+.button:hover {
+    background-color: #68139D;
+}
+
+/* highscore page */
+.highscores {
+    text-align: center;
+}
+
+/* help page*/
+.help-div {
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 30vw;
+    margin: 0 auto;
+    
+}
+.help-div h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.help-list li {
+    color: #FECCFF;
+    font-size: 1.5rem;
+    list-style-type: circle;
+    text-align: left;
+    font-weight: 400;
+    margin: 1.5rem;
+}
+/*form on help page*/
+form {
+    color: #FECCFF;
+    font-size: 1.4rem;
+    text-align: left;
+    padding-top: 50px;
+}
+.input {
+    height: 200px;
+    width: 500px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/*Questions page*/
+#question {
+    margin: 0 auto;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 1rem;
+    max-width: 80%;
+}
+/*options container*/
+.choice-container {
+    display: flex;
+    margin-bottom: .5rem;
+    width: 100%;
+    color: #FECCFF;
+    font-size: 1.5rem;
+    border: 4px outset #C2A91D;
+    border-radius: 5px;
+    max-width: 40rem;
+    margin: .2rem auto;
+    padding: .5rem;
+}
+/*hover effect for options container*/
+.choice-container:hover:not(.correct, .incorrect) {
+    background-color: #68139D;
+    cursor: pointer;
+    transform: translateY(-0.1rem);/* Reference w3school button animation*/
+    transition: transform 150ms;
+}
+.choice-container:active {
+    background-color: #68139D; 
+}
+/*options number*/
+.choice-prefix {
+    color: #FECCFF;
+    padding: .5rem;
+}
+/*options text inside container*/
+.choice-text {
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+}
+/*answer correct/incorrect colour change set by JS.*/
+.correct {
+    background-color: #28a745;
+  }
+  
+.incorrect {
+    background-color: #dc3545;
+  }
+
+
+/*progress bar*/
+#display {
+    justify-content: space-around;
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: #FECCFF;
+    display: flex;
+    margin: 80px 0px 40px;
+}
+.display-prefix {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.display-main-text {
+    text-align: center;
+    margin: 1rem;
+}
+#play-question {
+    font-size: 4rem;
+    margin: 5px 35px;
+    color: #C2A91D;
+}
+.fa-play-circle:hover {
+    cursor: pointer;
+    color: #AC4ADC;
+
+}
+/*progress bar styling*/
+#progress {
+    margin-top: 1.5rem;
+    border: 5px solid #C2A91D;
+    width: 10rem;
+}
+#complete-progress {
+    height: 1.5rem;
+    width: auto;
+    background-color: #AC4ADC;
+}
+/*Game-over page*/
+#score-card {
+    width: 100%;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FECCFF;
+    justify-content: space-around;
+}
+
+#username {
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 2rem;
+    font-weight:200;
+    font-size:.8rem;
+    padding: 1.5rem;
+}
+
+/*Highscores page*/
+
+#highScoresList {
+    list-style: none;
+    margin-bottom: 5rem;
+    padding-left: 0;
+    color: #FECCFF;
+  }
+  
+.high-score {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+/*Smaller mobile device fix. */
+@media screen and (max-width: 425px) {
+#logo {
+    font-size: 100%;
+    margin-left: 30px;
+}
+#menu {
+    font-size: 110%;
+}
+#menu li {
+    margin-bottom: 40px;
+}
+.container {
+    height: 90vh;
+}
+#heading {
+    font-size: 200%;
+    margin-left: 6rem;
+}
+#question {
+    font-size: 150%;
+}
+.choice-container {
+    width: 60%;
+    font-size: 1.2rem;
+}
+.help-div {
+    width: 60vw;
+}
+.input {
+    height: 100px;
+    width: 200px;
+    margin-top: 20px;
+}
+}  
+/* For screen sizes with min-height of 600px*/
+@media screen and (min-height: 600px) { 
+#logo {
+    font-size: 350%;
+}
+.help-div {
+    width: 70vw;
+}
+}
